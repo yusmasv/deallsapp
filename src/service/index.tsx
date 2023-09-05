@@ -31,7 +31,7 @@ const HandleValidation = async (query: string, category: string, start_range: nu
   filteredDataQuery = products.products;
 
   if (category !== '') {
-   filteredDataQuery.map((item: any, index: any) => {
+   filteredDataQuery.map((item: any) => {
       if (item.category === category) {
         filteredDataCategory.push(item)
       }
@@ -43,7 +43,7 @@ const HandleValidation = async (query: string, category: string, start_range: nu
 
 
   if (end_range !== 0) {
-    filteredDataCategory.map((item: any, index: any) => {
+    filteredDataCategory.map((item: any) => {
       if (item.price <= end_range && item.price >= start_range) {
         filteredDataPriceRange.push(item)
       }
@@ -55,7 +55,7 @@ const HandleValidation = async (query: string, category: string, start_range: nu
 
   if (brand !== '') {
     
-    filteredDataPriceRange.map((item: any, index: any) => {
+    filteredDataPriceRange.map((item: any) => {
       if (item.brand.toLowerCase() === brand.toLocaleLowerCase()) {
         console.log(item.brand.toLowerCase(), brand.toLowerCase())
         filteredDataBrand.push(item)
