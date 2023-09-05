@@ -7,7 +7,6 @@ function getAllProducts(skip: number, limit: number, keyword: string) {
         method: 'get',
         url: `${BASE_URL}/products/search?q=${keyword}&skip=${skip}&limit=${limit}`
         };
-        console.log(`${BASE_URL}/products/search?q=${keyword}&skip=${skip}&limit=${limit}`)
         return axios(config);
 }
 

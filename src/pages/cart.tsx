@@ -28,7 +28,6 @@ function Cart() {
         const FetchData = async () => {
             let data = await getCart(skip, limit)
             setAllCarts(data)
-            console.log(data)
            }
         
            FetchData(); 

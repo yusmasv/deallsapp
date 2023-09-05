@@ -57,7 +57,6 @@ const HandleValidation = async (query: string, category: string, start_range: nu
     
     filteredDataPriceRange.map((item: any) => {
       if (item.brand.toLowerCase() === brand.toLocaleLowerCase()) {
-        console.log(item.brand.toLowerCase(), brand.toLowerCase())
         filteredDataBrand.push(item)
       }
     }
